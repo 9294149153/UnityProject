@@ -1,0 +1,29 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio / Rider files
+.vs/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.suo
+*.tmp
+*.pidb
+*.booproj
+*.svd
+
+# Crash and build reports
+sysinfo.txt
+
+# Other
+*.apk
+*.aab
+*.unitypackage
+
