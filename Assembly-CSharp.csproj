@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\GameInput.cs" />
+    <Compile Include="Assets\Script\SelectiveCounterVisual.cs" />
     <Compile Include="Assets\PlayerInputAction.cs" />
     <Compile Include="Assets\Script\PlayerAnimatorController.cs" />
     <Compile Include="Assets\Script\Player.cs" />
