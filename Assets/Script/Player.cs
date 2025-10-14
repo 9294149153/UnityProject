@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour,IKitchenObjectParent
+public class Player : MonoBehaviour, IKitchenObjectParent
 {
 
     public static Player Instance { get; private set; }
@@ -59,19 +59,20 @@ public class Player : MonoBehaviour,IKitchenObjectParent
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e)
     {
-        if (selectedCounter != null) {
+        if (selectedCounter != null)
+        {
             selectedCounter.Interact(this);
-       
-        
+
+
         }
 
-      
+
     }
 
     private void Update()
     {
-       HandleMovement();
-       HandleInteraction();
+        HandleMovement();
+        HandleInteraction();
 
     }
 
@@ -90,25 +91,27 @@ public class Player : MonoBehaviour,IKitchenObjectParent
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
-        if (moveDir != Vector3.zero) { 
-        lastInteractDirection = moveDir;
+        if (moveDir != Vector3.zero)
+        {
+            lastInteractDirection = moveDir;
         }
 
-        if(Physics.Raycast(transform.position, lastInteractDirection, out RaycastHit rayCastHit, interactionDistance, countersLayerMask))
+        if (Physics.Raycast(transform.position, lastInteractDirection, out RaycastHit rayCastHit, interactionDistance, countersLayerMask))
         {
-            if(rayCastHit.transform.TryGetComponent<BaseCounter>(out BaseCounter baseCounter))
+            if (rayCastHit.transform.TryGetComponent<BaseCounter>(out BaseCounter baseCounter))
             {
                 // Has clearcounter object 
-                if (baseCounter != selectedCounter) {
+                if (baseCounter != selectedCounter)
+                {
 
-                    SetSelectedCounter( baseCounter);
+                    SetSelectedCounter(baseCounter);
                 }
 
 
             }
             else
             {
-                SetSelectedCounter( null);
+                SetSelectedCounter(null);
 
             }
         }
@@ -116,7 +119,7 @@ public class Player : MonoBehaviour,IKitchenObjectParent
         {
             SetSelectedCounter(null);
         }
-  
+
     }
 
     private void HandleMovement()
@@ -150,7 +153,7 @@ public class Player : MonoBehaviour,IKitchenObjectParent
                 //Attemp only Z movement
 
                 Vector3 moveDirZ = new Vector3(0f, 0f, moveDir.z).normalized;
-                canMove =moveDir.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHigh, playRadius, moveDirZ, moveDistance);
+                canMove = moveDir.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHigh, playRadius, moveDirZ, moveDistance);
 
                 if (canMove)
                 {
@@ -215,3 +218,4 @@ public class Player : MonoBehaviour,IKitchenObjectParent
         return kitchenObject != null;
     }
 }
+

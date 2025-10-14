@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7ab443c98936f459a476bf274d029a, type: 3}
-  m_Name: Tomato
+  m_Script: {fileID: 11500000, guid: 8da5f139fa496054c8a4f16f21ab0347, type: 3}
+  m_Name: Cabbage_CabbageSlice
   m_EditorClassIdentifier: 
-  prefabs: {fileID: 0}
-  sprite: {fileID: 0}
-  objectName: Tomato
+  input: {fileID: 11400000, guid: 337b3ea5a107f1f4ca92be481bacd9ff, type: 2}
+  output: {fileID: 11400000, guid: 72d5a69d6ab57cc4bb48e9dac689362e, type: 2}
+  CuttingProgressMax: 3

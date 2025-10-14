@@ -61,11 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CuttingCounter.cs" />
+    <Compile Include="Assets\Script\ProgressBarUI.cs" />
     <Compile Include="Assets\Script\ContainerCounterVisual.cs" />
     <Compile Include="Assets\Script\GameInput.cs" />
     <Compile Include="Assets\Script\KitchenObject.cs" />
     <Compile Include="Assets\Script\IKitchenObjectParent.cs" />
     <Compile Include="Assets\Script\ContainerCounter.cs" />
+    <Compile Include="Assets\Script\CutingRecipeSO.cs" />
+    <Compile Include="Assets\Script\CuttingCounterVisual.cs" />
     <Compile Include="Assets\Script\KitchenObjectSO.cs" />
     <Compile Include="Assets\Script\BaseCounter.cs" />
     <Compile Include="Assets\Script\SelectiveCounterVisual.cs" />
